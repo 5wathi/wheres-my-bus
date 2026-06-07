@@ -1,0 +1,36 @@
+{
+  "name": "wheres-my-bus",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Live city-bus tracker for India — find routes, see live arrivals and track buses across major cities.",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "paths": "node --experimental-strip-types scripts/fetch-paths.ts",
+    "icons": "node scripts/gen-icons.mjs"
+  },
+  "dependencies": {
+    "clsx": "^2.1.1",
+    "leaflet": "^1.9.4",
+    "lucide-react": "^0.474.0",
+    "next": "^15.5.19",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "react-leaflet": "^4.2.1",
+    "tailwind-merge": "^2.6.0"
+  },
+  "devDependencies": {
+    "@types/leaflet": "^1.9.16",
+    "@types/node": "^22.10.7",
+    "@types/react": "^18.3.18",
+    "@types/react-dom": "^18.3.5",
+    "autoprefixer": "^10.4.20",
+    "eslint": "^9.18.0",
+    "eslint-config-next": "^15.5.19",
+    "postcss": "^8.5.1",
+    "tailwindcss": "^3.4.17",
+    "typescript": "^5.7.3"
+  }
+}

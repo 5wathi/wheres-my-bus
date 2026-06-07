@@ -1,0 +1,87 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+
+  /* Light theme tokens (HSL triplets, consumed as hsl(var(--x))) */
+  --background: 220 30% 98%;
+  --foreground: 222 28% 14%;
+  --card: 0 0% 100%;
+  --muted: 220 20% 96%;
+  --muted-foreground: 220 12% 46%;
+  --border: 220 16% 90%;
+  --input: 220 16% 90%;
+  --map-bg: 232 23% 91%;
+}
+
+.dark {
+  --background: 222 30% 9%;
+  --foreground: 220 20% 92%;
+  --card: 222 24% 13%;
+  --muted: 222 18% 18%;
+  --muted-foreground: 220 12% 62%;
+  --border: 222 16% 22%;
+  --input: 222 16% 26%;
+  --map-bg: 222 28% 12%;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background: hsl(var(--background));
+  color: hsl(var(--foreground));
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Live-bus marker pulse ring (used by inline divIcon styles in BusMap). */
+@keyframes wmb-ping {
+  0% {
+    transform: scale(0.8);
+    opacity: 0.55;
+  }
+  100% {
+    transform: scale(2.4);
+    opacity: 0;
+  }
+}
+
+.leaflet-container {
+  font-family: var(--font-sans);
+}
+
+.leaflet-tooltip {
+  border: 1px solid hsl(220 16% 90%);
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(16, 24, 40, 0.12);
+  padding: 4px 8px;
+  font-size: 12px;
+  font-family: var(--font-sans);
+}
+
+.leaflet-tooltip-top::before {
+  border-top-color: hsl(220 16% 90%);
+}
+
+.dark .leaflet-tooltip {
+  background: hsl(222 24% 16%);
+  color: hsl(220 20% 92%);
+  border-color: hsl(222 16% 28%);
+}
+.dark .leaflet-tooltip-top::before {
+  border-top-color: hsl(222 16% 28%);
+}
+
+/* Thin scrollbars for the side panel. */
+.thin-scroll::-webkit-scrollbar {
+  width: 8px;
+}
+.thin-scroll::-webkit-scrollbar-thumb {
+  background: hsl(220 13% 85%);
+  border-radius: 9999px;
+}
