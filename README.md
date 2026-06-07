@@ -1,8 +1,13 @@
 # Where's My Bus 🚌
 
+[![CI](https://github.com/5wathi/wheres-my-bus/actions/workflows/ci.yml/badge.svg)](https://github.com/5wathi/wheres-my-bus/actions/workflows/ci.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+
 A live **city-bus tracker for India** — the bus analogue of *Where is my Train*.
 Track buses moving in real time on a map, find direct routes between two stops,
 see live arrivals at any stop, and follow an individual bus.
+
+![Where's My Bus — live map of Bengaluru](docs/live.png)
 
 Covers 18 Indian cities out of the box (metros + major tier-2):
 
@@ -20,6 +25,12 @@ Covers 18 Indian cities out of the box (metros + major tier-2):
 
 Adding a city is just a data entry in `src/data/cities.ts` followed by
 `npm run paths` to road-snap its routes.
+
+## Screenshots
+
+| Route detail (road-snapped line + live arrivals) | Dark mode |
+|---|---|
+| ![Route detail](docs/route.png) | ![Dark mode](docs/dark.png) |
 
 ## Features
 
